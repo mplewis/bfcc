@@ -44,6 +44,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Random data for tests and seeds
 gem 'faker'
+# Factory creation instead of fixtures for test data
+gem 'factory_girl_rails'
 # Live debugging in web REPL
 gem 'binding_of_caller'
 # Better `rails c`
