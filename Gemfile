@@ -33,6 +33,8 @@ gem 'jquery-rails'
 
 # User auth and management
 gem 'devise'
+# Access control
+gem 'pundit'
 # Admin interface
 gem 'rails_admin'
 # Use ActiveModel has_secure_password
