@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 gem 'passenger'
 # Less verbose logging
 gem 'lograge'
+# Better error pages when stuff breaks
+gem 'better_errors'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
