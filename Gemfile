@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 # Use Passenger as the Rails server
 gem 'passenger'
+# Less verbose logging
+gem 'lograge'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
