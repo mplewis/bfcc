@@ -37,5 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Open emails in the browser
+  gem 'letter_opener'
 end
 
