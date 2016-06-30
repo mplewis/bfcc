@@ -1,6 +1,6 @@
-h1 Listing polls
+h1 Your polls
 
-table
+table.table
   thead
     tr
       th User
@@ -12,7 +12,7 @@ table
   tbody
     - @polls.each do |poll|
       tr
-        td = poll.user
+        td = poll.user.email
         td = poll.text
         td = link_to 'Show', poll
         td = link_to 'Edit', edit_poll_path(poll)
@@ -20,4 +20,4 @@ table
 
 br
 
-= link_to 'New Poll', new_poll_path
+= link_to 'New Poll', new_poll_path, class: 'btn btn-primary'

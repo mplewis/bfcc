@@ -1,0 +1,8 @@
+- p = poll_result
+p
+  strong = p.text
+  = " (#{p.answers.count} votes)"
+p
+  ul
+  - p.choices.each do |c|
+    li = "#{c.text} (#{c.answers.count} votes)"
