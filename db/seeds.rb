@@ -23,3 +23,13 @@ p.save!
   c = Choice.new poll: p, text: "#{Faker::Book.title} by #{Faker::Book.author}"
   c.save!
 end
+
+50.times do
+  u = User.new email: Faker::Internet.email, password: Faker::Internet.password
+  u.save!
+  Poll.all.each do |p|
+    c = p.choices.sample
+    a = Answer.new user: u, poll: p, choice: c
+    a.save!
+  end
+end
