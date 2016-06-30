@@ -40,6 +40,11 @@ gem 'rails_admin'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# Utility
+
+# Random data for tests and seeds
+gem 'faker'
+
 # Target-specific
 
 group :development do
