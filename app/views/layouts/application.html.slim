@@ -10,6 +10,9 @@ html
     .container
       .row
         .col-md-12
+          = render 'layouts/navbar'
+      .row
+        .col-md-12
           p = notice
           p = alert
           = yield
