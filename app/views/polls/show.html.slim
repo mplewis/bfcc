@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong User:
+  = @poll.user
+p
+  strong Text:
+  = @poll.text
+
+= link_to 'Edit', edit_poll_path(@poll)
+'|
+= link_to 'Back', polls_path

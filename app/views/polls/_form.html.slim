@@ -1,0 +1,15 @@
+= form_for @poll do |f|
+  - if @poll.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@poll.errors.count, "error")} prohibited this poll from being saved:"
+      ul
+        - @poll.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions = f.submit
