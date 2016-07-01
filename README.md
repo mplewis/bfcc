@@ -27,7 +27,8 @@
 ## Known Tech Debt
 
 * `_poll_result.html.slim` is a horrific amalgamation of Ruby, JS, and external JS. This should be refactored.
-* No access control: Any user can modify or delete polls, choices, and answers.
+* Access control is primitive: Users should be only able to access their own polls, but users can definitely delete other users and answers.
+* I don't know how flashed messages are getting into the view.
 
 ## User Story Issues
 
