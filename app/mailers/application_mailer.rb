@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'bfcc@mplewis.com'
+  default from: Rails.application.config.site_email
   layout 'mailer'
 end

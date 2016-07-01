@@ -1,4 +1,4 @@
 Your poll, "<%= @poll.text %>", has a new response.
 
 Click here to view your poll:
-<%= url_for [@poll, {host: 'https://bfcc.mplewis.com'}] %>
+<%= url_for [@poll, {host: Rails.application.config.site_hostname}] %>
