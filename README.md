@@ -15,7 +15,7 @@
 # User Stories
 
 - [x] As a user I would like to create an account so that I can create and manage my polls.
-- [ ] As a user I would like to create a poll so that I can share it and collect feedback.
+- [x] As a user I would like to create a poll so that I can share it and collect feedback.
 - [ ] As a user I would like a way to share my polls on a variety of social networks so that I can gather my results.
 - [x] As a user I would like to be notified whenever someone answers my poll.
 - [x] As a user I would like to prevent multiple people from taking the same poll twice without requiring them to login.
@@ -26,6 +26,7 @@
 
 ## Known Tech Debt
 
+* **Users can't actually create choices for their polls yet...** use the `rake db:seed` command to add some simulated poll data.
 * `_poll_result.html.slim` is a horrific amalgamation of Ruby, JS, and external JS. This should be refactored.
 * Access control is primitive: Users should be only able to access their own polls, but users can definitely delete other users and answers.
 * I don't know how flashed messages are getting into the view.
