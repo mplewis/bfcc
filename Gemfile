@@ -24,6 +24,8 @@ gem 'slim-rails'
 gem 'sass-rails', '~> 5.0'
 # Use Bootstrap for page layout
 gem 'bootstrap-sass'
+# Simplifies building Bootstrap forms in Rails
+gem 'bootstrap_form'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use jquery as the JavaScript library
