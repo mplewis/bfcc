@@ -1,8 +1,7 @@
 h1 Editing poll
 
-== render 'form'
+p == render 'form'
 
-= link_to 'Show', @poll
-'|
-= link_to 'Back', polls_path
+p = link_to 'Show', @poll, class: 'btn btn-default'
 
+p = link_to 'Back', polls_path, class: 'btn btn-default'
