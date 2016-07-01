@@ -49,6 +49,12 @@ class PollsController < ApplicationController
     redirect_to polls_url, notice: 'Poll was successfully destroyed.'
   end
 
+  # POST /polls/1/vote
+  def vote
+    puts "voted with params: #{params}"
+    redirect_to :back, notice: 'Your vote was cast.'
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_poll

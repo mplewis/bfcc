@@ -4,15 +4,19 @@ p = render 'shared/poll_result', {poll_result: @poll}
 
 - if !@poll.user_has_voted? current_user
   h3 Vote on this poll
-  .vote
-    = bootstrap_form_tag do |f|
+  p.vote
+    - if @poll.choices.count > 0
+      = bootstrap_form_tag(url: vote_poll_path(@poll)) do |f|
+        p
+          - @poll.choices.each do |c|
+            label
+              = radio_button_tag :choice, c.id, id: c.id, type: 'radio'
+              = c.text
+            br
+        = f.submit
+    - else
       p
-        - @poll.choices.each do |c|
-          label
-            = radio_button_tag :choice, c.id, id: c.id, type: 'radio'
-            = c.text
-          br
-      = f.submit
+        em This poll has no choices available.
 
 - if @poll.user == current_user
   p = link_to 'Edit', edit_poll_path(@poll), class: 'btn btn-default'
