@@ -51,8 +51,16 @@ class PollsController < ApplicationController
 
   # POST /polls/1/vote
   def vote
-    puts "voted with params: #{params}"
-    redirect_to :back, notice: 'Your vote was cast.'
+    # voted with params: {"choice"=>"15", "id"=>"3"}
+    p = Poll.find params[:id]
+    c = Choice.find params[:choice]
+    a = Answer.new user: current_user, poll: p, choice: c
+    if a.save
+      notice = 'Your vote was cast.'
+    else
+      notice = 'You have already voted for this poll.'
+    end
+    redirect_to :back, notice: notice
   end
 
   private
