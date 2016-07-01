@@ -1,0 +1,1 @@
+json.partial! 'shared/poll_result', poll: @poll
