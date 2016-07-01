@@ -29,6 +29,7 @@
 * `_poll_result.html.slim` is a horrific amalgamation of Ruby, JS, and external JS. This should be refactored.
 * Access control is primitive: Users should be only able to access their own polls, but users can definitely delete other users and answers.
 * I don't know how flashed messages are getting into the view.
+* **Answer** model is probably redundant. A Poll owns a Choice, and an Answer refers to both a Poll and a Choice. It could just point to the Choice.
 
 ## User Story Issues
 
