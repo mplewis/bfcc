@@ -2,9 +2,20 @@
 
 div
   p
-    strong = p.text
+    strong
+      = link_to p
+        = p.text
     = " (#{p.answers.count} votes)"
-  canvas id="chart_#{p.id}" width="600" height="200"
+  p
+    ' Creator:
+    = p.user.email
+
+  - if p.answers.count == 0
+    p
+      em This poll has not yet been answered. Please check back later.
+  - else
+    canvas id="chart_#{p.id}" width="600" height="200"
+
 
 script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js'
 
