@@ -1,8 +1,36 @@
 - p = poll_result
-p
-  strong = p.text
-  = " (#{p.answers.count} votes)"
-p
-  ul
-  - p.choices.each do |c|
-    li = "#{c.text} (#{c.answers.count} votes)"
+
+div
+  p
+    strong = p.text
+    = " (#{p.answers.count} votes)"
+  canvas id="chart_#{p.id}" width="600" height="200"
+
+script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.6/Chart.min.js'
+
+script
+  | var poll_src = "#{url_for(poll_path(p.id, format: :json))}";
+
+javascript:
+  $.get(poll_src)
+  .error(function(err) { console.error(err) })
+  .success(function(data) {
+    console.log(data)
+    var labels = []
+    var counts = []
+    data.choices.forEach(function(choice) {
+      labels.push(choice.text)
+      counts.push(choice.votes)
+    })
+    canvas_id = "chart_" + data.id
+    var ctx = document.getElementById(canvas_id);
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: labels,
+        datasets: [{
+          data: counts
+        }]
+      }
+    })
+  })
