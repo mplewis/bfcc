@@ -17,7 +17,7 @@
 - [x] As a user I would like to create an account so that I can create and manage my polls.
 - [ ] As a user I would like to create a poll so that I can share it and collect feedback.
 - [ ] As a user I would like a way to share my polls on a variety of social networks so that I can gather my results.
-- [ ] As a user I would like to be notified whenever someone answers my poll.
+- [x] As a user I would like to be notified whenever someone answers my poll.
 - [x] As a user I would like to prevent multiple people from taking the same poll twice without requiring them to login.
 - [x] As a user I would like to display the results of my post in a graphical manner so that I can visually understand the various poll answers.
 - [ ] As a user I would like to set an end time to my poll and prevent any additional responses when that date is met.
