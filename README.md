@@ -24,7 +24,12 @@
 
 # Notes
 
-Issue with user story:
+## Known Tech Debt
+
+* `_poll_result.html.slim` is a horrific amalgamation of Ruby, JS, and external JS. This should be refactored.
+* No access control: Any user can modify or delete polls, choices, and answers.
+
+## User Story Issues
 
 > As a user I would like to prevent multiple people from taking the same poll twice without requiring them to login.
 
