@@ -13,8 +13,10 @@ module Bfcc
     # -- all .rb files in that directory are automatically loaded.
 
     # Site identity for links
-    config.site_hostname = 'http://localhost:3000'
-    config.site_email = 'bfcc@kesdev.com'
+    hostname = ENV['SITE_HOSTNAME'] || 'http://localhost:3000'
+    config.site_email = ENV['SITE_EMAIL'] || 'bfcc@kesdev.com'
+    config.site_hostname = hostname
+    Rails.application.routes.default_url_options[:host] = hostname
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.

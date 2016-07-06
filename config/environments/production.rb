@@ -83,7 +83,4 @@ Rails.application.configure do
       api_key: 'key-3dg2qpifmxr6fg9q-sjcf3g998ts-jq1',
       domain: 'kesdev.com'
   }
-
-  # Use the proper Heroku domain in emails.
-  config.site_hostname = 'https://bfcc-mplewis.herokuapp.com'
 end
