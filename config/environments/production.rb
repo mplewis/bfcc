@@ -76,4 +76,14 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Send email using Mailgun.
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+      api_key: 'key-3dg2qpifmxr6fg9q-sjcf3g998ts-jq1',
+      domain: 'kesdev.com'
+  }
+
+  # Use the proper Heroku domain in emails.
+  config.site_hostname = 'https://bfcc-mplewis.herokuapp.com'
 end
