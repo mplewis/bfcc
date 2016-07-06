@@ -26,5 +26,8 @@ module Bfcc
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # This will be set to true during rake db:seed only.
+    config.db_seed_currently_in_progress? = false
   end
 end
