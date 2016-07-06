@@ -22,6 +22,4 @@ test:
   <<: *default
   database: bfcc_test
 
-production:
-  <<: *default
-  database: bfcc_production
+# Production DB connection info comes from ENV["DATABASE_URL"]
