@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Set a fixed Ruby version
+# Set a fixed Ruby version for Heroku
 ruby '2.3.1'
 
 # Core Rails stuff
@@ -68,5 +68,8 @@ group :development do
 end
 
 group :production do
+  # Heroku + Rails support
   gem 'rails_12factor'
+  # Email using Railgun
+  gem 'mailgun_rails'
 end
