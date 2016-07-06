@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# Set a fixed Ruby version
+ruby '2.3.1'
+
 # Core Rails stuff
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -64,3 +67,6 @@ group :development do
   gem 'letter_opener'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
