@@ -1,7 +1,7 @@
 require 'faker'
 
 # Emails shouldn't go out during seeding.
-Rails.application.config.db_seed_currently_in_progress? = true
+Rails.application.config.db_seed_currently_in_progress = true
 
 u = User.new email: Faker::Internet.email, password: Faker::Internet.password
 u.save!
@@ -37,4 +37,4 @@ end
   end
 end
 
-Rails.application.config.db_seed_currently_in_progress? = false
+Rails.application.config.db_seed_currently_in_progress = false

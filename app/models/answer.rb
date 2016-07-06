@@ -9,7 +9,7 @@ class Answer < ActiveRecord::Base
 
   after_create do |answer|
     poll = answer.poll
-    PollActivityMailer.new_response(poll).deliver_now unless Rails.application.config.db_seed_currently_in_progress?
+    PollActivityMailer.new_response(poll).deliver_now unless Rails.application.config.db_seed_currently_in_progress
   end
 
 end
